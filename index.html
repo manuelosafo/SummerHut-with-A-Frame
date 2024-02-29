@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-Frame Project</title>
+    <script src="Script/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!-------------------------------------Assets--------------------------------------------->
+        <a-asset>
+            <img src="Images/SoilBeach0050_1_350.jpg" alt="" id="setting">
+            <img src="Images/SoilBeach0050_1_350-NRM.jpg" alt="" id="setting-NRM">
+            <img src="Images/sky-.jpg" alt="" id="sky">
+            <img src="Images/sky-%20Centre.jpg" alt="" id="360-paranoma">
+            <img src="Images/grass.jpg" alt="" id="grass">
+            <img src="Images/grass-NRM.jpg" alt="" id="grass-NRM">
+            <img src="Images/tile.jpg" alt="" id="tile">
+            <img src="Images/tile-NRM.jpg" alt="" id="tile-NRM">
+            <img src="Images/straw-beach-umbrella-close-up_254969-288.jpg" alt="" id="hut">
+            <img src="Images/straw-beach-umbrella-close-up_254969-288-NRM.jpg" alt="" id="hut-NRM">
+            <img src="Images/ttop.jpg" alt="" id="ttop">
+            <img src="Images/ttop-NRM.jpg" alt="" id="ttop-NRM">
+            <img src="Images/milo4.jpg" alt="" id="tin">
+            <img src="Images/milo4-NRM.jpg" alt="" id="tin-NRM">
+            <img src="Images/ideal.jpg" alt="" id="milk">
+            <img src="Images/ideal-NRM.jpg" alt="" id="milk-NRM">
+            <img src="Images/tree.jpg" alt="" id="bark">
+            <img src="Images/tree-NRM.jpg" alt="" id="bark-NRM">
+            <img src="Images/pavementgrass.jpg" alt="" id="inner-floor">
+            <img src="Images/pavementgrass-NRM.jpg" alt="" id="inner-floor-NRM">
+            <img src="Images/wall.jpg" alt="" id="wall">
+            <img src="Images/wall-NRM.jpg" alt="" id="wall-NRM">
+            <img src="Images/black-road-texture_1160-806.jpg" alt="" id="road">
+            <img src="Images/black-road-texture_1160-806-NRM.jpg" alt="" id="road-NRM">
+
+
+        </a-asset>
+        <!-------------------------------------Wall----------------------------------------------->
+        <a-box material="color:" src="#wall" normal-map="#wall-NRM" height="5" width="30" depth="0.5" rotation="0 0 180" position="0 0 -10"></a-box>
+        <a-box material="color:" src="#wall" normal-map="#wall-NRM" height="5" width="20" depth="0.5" rotation="0 -90 0" position="-15 0 0"></a-box>
+        <a-box material="color:" src="#wall" normal-map="#wall-NRM" height="5" width="20" depth="0.5" rotation="0 90 0" position="15 0 0"></a-box>
+        <a-box material="color:" src="#wall" normal-map="#wall-NRM" height="5" width="12.5" depth="0.5" rotation="0 0 180" position="-9 0 10"></a-box></a-box>
+        <a-box material="color:" src="#wall" normal-map="#wall-NRM" height="5" width="12.5" depth="0.5" rotation="0 0 180" position="9 0 10"></a-box></a-box>
+
+        <!-------------------------------------Asphat-------------------------------------->
+        <a-box material="color:" src="#road" normal-map="#road-NRM" repeat="5 5" height="0.025" position="0 0.05 20" width="5.5" depth="20"></a-box>
+
+
+        <!---------------------------Sky------------------------------->
+        <a-sky src="#sky"></a-sky>
+
+        <!--------------------------Ground----------------------------->
+        <a-plane material="color:";
+        src="#setting";
+        normal-map="#setting-NRM";
+        normal-texture-repeat="5000 5000";
+        rotation="-90 0 0"
+        scale="10000 10000 0"
+        repeat="5000 5000">
+        </a-plane>
+        <a-box material="color:"; height="0.05" position="5.5 0.05 0" width="19" depth="20"
+        src="#tile"; normal-map="#tile-NRM"; repeat="5 10"
+        >
+        </a-box>
+        <a-box material="color:"; height="0.005" position="-9.5 0.05 0" width="11" depth="20"
+        src="#grass";
+        normal-map="#grass-NRM";
+        repeat="10 10"
+        >
+        </a-box>
+        
+
+        <!--------------------------S-hut IF----------------------------->
+        <a-cylinder material="color:Russet"
+                    src="#inner-floor"
+                    normal-map="#inner-floor-NRM"
+                    normal-texture-repeat="3 3"
+                    repeat="3 3"
+                    position="-11 0.05 0" radius="3" height="0.1">
+
+                    <!--------------------------Chairs----------------------------->
+                    <a-cylinder material="color:tawny"
+                                src="#bark"
+                                normal-map="#bark-NRM"; 
+                                position="0 0.4 1.4" radius="0.35" height="0.7">
+                    </a-cylinder>
+                    <a-cylinder material="color:tawny"
+                                src="#bark"
+                                normal-map="#bark-NRM"; 
+                                position="0 0.4 -1.4" radius="0.35" height="0.7">
+                    </a-cylinder>
+                    <!--------------------------Table----------------------------->
+                    <a-cylinder material="" src="#ttop" normal-map="#ttop-NRM"; position="0 1.1 0" radius="1" height="0.08" >
+                    </a-cylinder>
+                    <a-cylinder color=black radius="0.03" position="0.5 0.8 0"
+        height="0.95" rotation="0 0 -50"></a-cylinder>
+        <a-cylinder color=black radius="0.05" position="-0.5 0.8 0"
+        height="0.95" rotation="0 0 50"></a-cylinder>
+        <a-cylinder color="black" radius="0.28" height="0.1" position="0 1.2 0"></a-cylinder>
+                    <!--------------------------Pole----------------------------->
+                    <a-cylinder material="color:wood"
+        src="#bark"
+        normal-map="#bark-NRM";                    
+        radius="0.2" height="9">
+                   </a-cylinder>
+                   <!--------------------------Hut----------------------------->
+        <a-cone material="color:;
+        src:#hut;
+        normalMap:#hut-NRM;"
+        repeat="10 10"
+        position="0 3.6 0" radius-bottom="4" height="2"
+        open-ended="true" side="double">
+        <a-ring color="brown" radius-inner="0.9" radius-outer="1" position="0 0.5 0"
+                 rotation="-90 0 0" side="double"></a-ring>
+        <a-ring color="brown" radius-inner="1.9" radius-outer="2" position="0 0 0"
+                 rotation="-90 0 0" side="double"></a-ring>
+        <a-ring color="brown" radius-inner="2.9" radius-outer="3" position="0 -0.5 0"
+                 rotation="-90 0 0" side="double"></a-ring>
+        <a-ring color="brown" radius-inner="3.9" radius-outer="4" position="0 -1 0"
+                 rotation="-90 0 0" side="double"></a-ring>
+        </a-cone>
+        <!--------------------------cupL----------------------------->
+        <a-cylinder material="color:white" src="" radius="0.05"
+                    position="0 1.2 0.7" height="0.15" side="double"
+                    open-ended="true">
+                    <a-circle color="#6F4E37" radius="0.05"
+                              position="0 0.07 0" rotation="-90 0 0">
+                    </a-circle>
+        </a-cylinder>
+        <a-ring color="white" radius-inner="0.03" radius-outer="0.04" theta-start="90" theta-length="270" position="0 1.22 0.76" rotation="0 90 -45"></a-ring>></a-ring>
+
+        <!--------------------------cupR----------------------------->
+        <a-cylinder material="color:" src="" radius="0.05"
+                    position="0 1.2 -0.7" height="0.15" side="double"
+                    open-ended="true">
+                    <a-circle color="#6F4E37" radius="0.05"
+                              position="0 0.07 0" rotation="-90 0 0">
+                    </a-circle>
+        </a-cylinder>
+        <a-ring color="white" radius-inner="0.03" radius-outer="0.04" theta-start="180" theta-length="270" position="0 1.22 -0.76" rotation="0 90 45"></a-ring>
+        
+        <!--------------------------Milo Tin----------------------------->
+         <a-cylinder material="color:" src="#tin" normal-map="#tin-NRM" radius="0.06" 
+                     position="0.5 1.2 0.1" height="0.2" side="double" rotation="0 270 0"
+                    ></a-cylinder>
+
+        <!--------------------------Milk Tin----------------------------->
+        <a-cylinder material="color:" src="#milk" normal-map="#milk-NRM" radius="0.04" 
+        position="0.5 1.2 -0.1" height="0.1" side="double" rotation="0 270 0"></a-cylinder>
+
+        <!--------------------------Surround----------------------------->
+        <a-cylinder material=""
+                    src="#wall"
+                    normal-map="#wall-NRM"
+                    radius="3" open-ended="true"
+                    depth="0.5"
+                    side="double" theta-start="20" theta-length="320" rotation="0 90 0"
+                    height="1.5">
+        </a-cylinder>
+        <a-cylinder material=""
+                    src="#tile"
+                    normal-map="#tile-NRM" repeat="2 10"
+                    position="0 0.02 0"
+                    radius="3.5" height="0.05"></a-cylinder>
+        </a-cylinder>
+        
+        <!-----------------------Walkway------------------------>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-4.4 0.05 0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-4.4 0.05 -0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-5.1 0.05 0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-5.1 0.05 -0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-5.8 0.05 0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-5.8 0.05 -0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-6.5 0.05 0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-6.5 0.05 -0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-7.2 0.05 0.35"></a-box>
+        <a-box color="" src="#tile" normal-map="#tile-NRM" height="0.05" width="0.6" depth="0.6" position="-7.2 0.05 -0.35"></a-box>
+        
+        
+
+
+
+
+
+
+    </a-scene>
+</body>
+</html>
